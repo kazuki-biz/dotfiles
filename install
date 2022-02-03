@@ -22,6 +22,8 @@ for rcfile in $CURRENT_DIRECTORY/.zprezto/runcoms/^README.md(.N); do
 done
 
 echo "Create symbolic link [$CONFIG_PATH/nvim -> $CURRENT_DIRECTORY/.config/nvim]"
+ln -fs $CURRENT_DIRECTORY/.config/git $CONFIG_PATH
+echo "Create symbolic link [$CONFIG_PATH/git -> $CURRENT_DIRECTORY/.config/git]"
 ln -fs $CURRENT_DIRECTORY/.config/nvim $CONFIG_PATH
 dotfiles=(.zprezto .zshrc .zpreztorc .zprofile .p10k.zsh .tmux.conf .tmux .hyper.js)
 for file in $dotfiles; do
