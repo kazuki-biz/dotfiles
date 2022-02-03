@@ -63,3 +63,38 @@ export TERM=xterm-256color
 
 ## PC 毎の固有の設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# etc↲    
+# alias↲    
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -l'
+alias cat='bat' 
+alias restart='exec $SHELL -l' 
+alias g='cd $(ghq root)/$(ghq list | peco)'
+alias sv='ssh $(sh ~/shell/ssh_hosts.sh | peco)'
+
+# alias git
+alias pco='git checkout $(git branch | tr \* " " | peco)'
+alias pdi='git diff $(git branch | tr \* " " | peco) $(git branch | tr \* " " | peco)'↲
+alias ppush='git push origin $(git branch | tr \* " " | peco)'
+alias push='git push origin $(git branch --contains | tr \* " ")'
+alias ppull='git pull origin $(git branch | tr \* " " | peco)'
+alias pull='git pull origin $(git branch --contains | tr \* " ")'
+alias pbd='git branch -D $(git branch | tr \* " " | peco)'
+alias ci='git commit'
+alias st='git status'
+alias add='git add'
+alias co='git checkout'
+alias di='git diff'
+↲    
+# export
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/opt/redis@3.2/bin:$PATH"
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+export NODEBREW_ROOT="/usr/local/var/nodebrew"
+export PATH="/usr/local/Cellar/go/1.14.2_1/bin:$PATH"
+export PATH="/usr/local/Cellar/protobuf/3.11.4_1/bin:$PATH 
+export PATH="$HOME/flutter/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
