@@ -64,8 +64,8 @@ export TERM=xterm-256color
 ## PC 毎の固有の設定
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# etc↲    
-# alias↲    
+# etc
+# alias
 alias ls='exa'
 alias la='exa -a'
 alias ll='exa -l'
@@ -87,7 +87,7 @@ alias st='git status'
 alias add='git add'
 alias co='git checkout'
 alias di='git diff'
-↲    
+
 # export
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/redis@3.2/bin:$PATH"
