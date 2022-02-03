@@ -73,6 +73,7 @@ alias cat='bat'
 alias restart='exec $SHELL -l' 
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias sv='ssh $(sh ~/shell/ssh_hosts.sh | peco)'
+alias open="open -a '/Applications/Google Chrome.app'"
 
 # alias git
 alias pco='git checkout $(git branch | tr \* " " | peco)'
@@ -94,7 +95,7 @@ export PATH="/usr/local/opt/redis@3.2/bin:$PATH"
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 export NODEBREW_ROOT="/usr/local/var/nodebrew"
 export PATH="/usr/local/Cellar/go/1.14.2_1/bin:$PATH"
-export PATH="/usr/local/Cellar/protobuf/3.11.4_1/bin:$PATH 
+export PATH="/usr/local/Cellar/protobuf/3.11.4_1/bin:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
