@@ -1,7 +1,7 @@
 # Git submodule update command
 `git submodule update --init --recursive`
 
-# Operation
+# Install Operation
 ## 1. brew install
 
 `zsh brew_install.sh`
