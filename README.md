@@ -10,7 +10,7 @@
 
 `zsh install`
 
-# Trable Shuting
+# Trable Shooting
 
 ## cac.nvim reinstall
 [coc.nvim] build/index.js not found, please install dependencies and compile coc.nvim by: yarn install
