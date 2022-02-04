@@ -7,6 +7,9 @@ build_on = '''
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 
+[[plugins]]
+repo = 'twitvim/twitvim'
+
 ###### ヘルプ日本語化 ######
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'

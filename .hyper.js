@@ -10,7 +10,8 @@ module.exports = {
     // default font size in pixels for all tabs
     fontSize: 12,
     // font family with optional fallbacks
-    fontFamily: "MesloLGS NF",
+    fontFamily:
+      '"VL ゴシック", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",
     // font weight for bold characters: 'normal' or 'bold'
@@ -145,7 +146,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperpower", "hyperborder", "hyper-flat"],
+  plugins: ["hyperpower", "hyperborder", "hyper-flat", "verminal", "hyper-corubo"],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed

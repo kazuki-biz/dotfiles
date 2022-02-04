@@ -73,7 +73,7 @@ alias cat='bat'
 alias restart='exec $SHELL -l' 
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias sv='ssh $(sh ~/shell/ssh_hosts.sh | peco)'
-alias open="open -a '/Applications/Google Chrome.app'"
+alias open="open -a '/Applications/Firefox.app'"
 
 # alias git
 alias pco='git checkout $(git branch | tr \* " " | peco)'

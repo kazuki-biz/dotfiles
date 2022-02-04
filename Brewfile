@@ -8,6 +8,7 @@ brew "exa"
 brew "docker", link: false
 brew "docker-compose", link: false
 brew "fd"
+brew "fzf"
 brew "ghq"
 brew "git"
 brew "git-lfs"
