@@ -1,0 +1,3 @@
+inoremap <silent> jj <ESC>
+nnoremap <silent> K gt
+nnoremap <silent> J gT
