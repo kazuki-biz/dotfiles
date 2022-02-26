@@ -9,6 +9,7 @@ brew "docker", link: false
 brew "docker-compose", link: false
 brew "fd"
 brew "fzf"
+brew "gcalcli"
 brew "ghq"
 brew "git"
 brew "git-lfs"
@@ -16,8 +17,10 @@ brew "jq"
 brew "lazygit"
 brew "nvim"
 brew "neovim"
+brew "task"
 brew "tmux"
 brew "peco"
+brew "python"
 brew "zsh"
 
 cask "1password"
