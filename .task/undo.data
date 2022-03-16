@@ -28,3 +28,6 @@ new [description:"RDS手順書にインスタンス" entry:"1646271876" modified
 time 1646272789
 new [description:"EC2手順書に50台にする手順追加" entry:"1646272789" modified:"1646272789" status:"pending" uuid:"c9a711fb-4cd4-4643-9b07-f4aa376a9541"]
 ---
+time 1647395443
+new [description:"DEVノjenkinsのLB外し" entry:"1647395442" modified:"1647395442" status:"pending" uuid:"17611767-7a1d-4f70-8355-1eff672dca8f"]
+---

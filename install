@@ -35,15 +35,13 @@ dotfiles=(
   .p10k.zsh 
   .tmux.conf 
   .tmux 
-  .hyper.js 
-  .hyper_plugins
   .vimrc 
   .ideavim 
   .shell 
   .task 
   .taskrc
   .aws
-
+  .alacritty.yml
 )
 
 for file in $dotfiles; do

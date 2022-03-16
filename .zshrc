@@ -72,7 +72,7 @@ alias ll='exa -l'
 alias cat='bat' 
 alias restart='exec $SHELL -l' 
 alias g='cd $(ghq root)/$(ghq list | peco)'
-alias sv='ssh $(sh ~/.shell/.ssh_hosts.sh | peco)'
+alias sv='ssh $(~/.shell/ssh_hosts | peco)'
 alias open="open -a '/Applications/Firefox.app'"
 
 # alias git
@@ -88,6 +88,7 @@ alias st='git status'
 alias add='git add'
 alias co='git checkout'
 alias di='git diff'
+alias firefox='~/.shell/firefox'
 
 # export
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
