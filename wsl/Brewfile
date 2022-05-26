@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
-brew "anyenv"
 brew "bat"
 brew "exa"
 brew "docker", link: false
@@ -18,6 +17,7 @@ brew "jq"
 brew "lazygit"
 brew "nvim"
 brew "neovim"
+brew "nodenv"
 brew "task"
 brew "tmux"
 brew "peco"

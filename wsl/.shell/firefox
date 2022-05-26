@@ -1,0 +1,2 @@
+# !/bin/sh
+/usr/local/Caskroom/firefox/96.0.3/Firefox.app/Contents/MacOS/firefox -url https://duckduckgo.com/?q=$1

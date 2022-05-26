@@ -54,17 +54,4 @@ else
   echo "Installed node (version: $(node -v))"
 fi
 
-echo ''
-echo '######################################'
-echo '##           Install yarn           ##'
-echo '######################################'
-if ! builtin command -v yarn > /dev/null; then
-  echo "Install yarn"
-  npm install -g yarn
-  echo 'export PATH=$PATH:`npm bin -g`' >> ~/.zshrc
-  source ~/.zshrc >> /dev/null
-else
-  echo 'Installed yarn'
-fi
-
 echo 'Neovim install completed!!!'
