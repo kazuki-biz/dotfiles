@@ -27,8 +27,7 @@ dotfiles=(
   .tmux 
   .vimrc 
   .shell 
-  .task 
-  .taskrc
+  .task
 )
 
 for file in $dotfiles; do
