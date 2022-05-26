@@ -1,0 +1,70 @@
+#!/bin/zsh
+
+CONFIG_PATH="$HOME/.config"
+NODE_VERSION='16.13.2'
+CURRENT_DIRECTORY=$(pwd)
+
+# add submodule
+git submodule update --init --recursive
+echo 'Start install zprezto!!!'
+
+echo ''
+echo '######################################'
+echo '##       Setup zprezto config       ##'
+echo '######################################'
+# Prezto
+setopt EXTENDED_GLOB
+for rcfile in $CURRENT_DIRECTORY/.zprezto/runcoms/^README.md(.N); do
+  echo "Create symbolic link ["${ZDOTDIR:-$HOME}/.${rcfile:t}" -> $rcfile]]"
+  ln -fs "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+
+# dotfiles
+dotfiles=(
+  .zprezto 
+  .zshrc 
+  .zpreztorc 
+  .zprofile 
+  .tmux.conf 
+  .tmux 
+  .vimrc 
+  .shell 
+  .task 
+  .taskrc
+)
+
+for file in $dotfiles; do
+  echo "Create symbolic link [${ZDOTDIR:-$HOME}/$file -> $CURRENT_DIRECTORY/$file]"
+  ln -fs $CURRENT_DIRECTORY/$file ${ZDOTDIR:-$HOME}
+done
+
+source $CURRENT_DIRECTORY/.zshrc
+source $CURRENT_DIRECTORY/.zpreztorc
+
+echo ''
+echo '######################################'
+echo '##           Install node           ##'
+echo '######################################'
+if ! builtin command -v node > /dev/null; then
+  echo "Install node version is $NODE_VERSION"
+  yes | nodenv install $NODE_VERSION
+  nodenv rehash
+  nodenv global $NODE_VERSION
+else
+  echo "Installed node (version: $(node -v))"
+fi
+
+echo ''
+echo '######################################'
+echo '##           Install yarn           ##'
+echo '######################################'
+if ! builtin command -v yarn > /dev/null; then
+  echo "Install yarn"
+  npm install -g yarn
+  echo 'export PATH=$PATH:`npm bin -g`' >> ~/.zshrc
+  source ~/.zshrc >> /dev/null
+else
+  echo 'Installed yarn'
+fi
+
+echo 'Neovim install completed!!!'
