@@ -4,8 +4,6 @@ CONFIG_PATH="$HOME/.config"
 NODE_VERSION='16.13.2'
 CURRENT_DIRECTORY=$(pwd)
 
-# add submodule
-git submodule update --init --recursive
 echo 'Start install zprezto!!!'
 
 echo ''
