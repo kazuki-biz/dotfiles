@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+CONFIG_PATH="$HOME/.config"
+CURRENT_DIRECTORY=$(pwd)
+
+# dotfiles
+dotfiles=(
+  .zshrc 
+  .tmux.conf 
+  .tmux 
+  .vimrc 
+  .shell 
+  .task 
+  .taskrc
+)
+
+for file in $dotfiles; do
+  echo "Create symbolic link [${ZDOTDIR:-$HOME}/$file -> $CURRENT_DIRECTORY/$file]"
+  ln -fs $CURRENT_DIRECTORY/$file ${ZDOTDIR:-$HOME}
+done
+
+source $CURRENT_DIRECTORY/.zshrc
